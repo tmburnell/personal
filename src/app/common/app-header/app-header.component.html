@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="start center" class="header noprint">
+  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+      <div class="appHeader" routerLink="/resume">{{user?.name}}'s</div>
+      <app-nav [(navConfig)]="navConfig" (navChange)="navChange.emit($event)"></app-nav>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center end">
+      <fa name="print" size='2' (click)="printPage()" class="clickable"></fa>
+    <!--<mat-icon (click)="printPage()" class="print">print</mat-icon>-->
+  </div>
+</div>

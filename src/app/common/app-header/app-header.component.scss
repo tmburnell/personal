@@ -1,0 +1,29 @@
+@import '../../../style-vars';
+
+@media print {
+  .noprint {
+    display: none !important;
+  }
+}
+
+:host-context {
+  .header {
+    padding: 0 24px;
+    background-color: $white;
+    border-bottom: solid 2px $headerUnderline;
+  }
+
+  .appHeader {
+    margin: 0 8px;
+    cursor: pointer;
+  }
+
+  .appHeader:focus {
+    outline: 0;
+  }
+
+  .print {
+    cursor: pointer;
+  }
+}
+

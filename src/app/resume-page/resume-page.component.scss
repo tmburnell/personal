@@ -1,0 +1,200 @@
+@import '../../style-vars';
+
+$facebook_color           : hsla(222, 47%, 40%, 1);     // #365397
+$twitter_color            : hsla(198, 100%, 47%, 1);    // #00a9f1
+$linkedin_color           : hsla(203, 100%, 35%, 1);    // #006db3
+$github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
+
+@media print {
+  .skill-level {
+    -webkit-print-color-adjust: exact;
+
+    &.professional {
+      background-color: $text !important;
+    }
+    &.competent {
+      background-color: $text !important;;
+    }
+    &.novice {
+      background-color: $text !important;;
+    }
+  }
+
+  a {
+    color: $text !important;
+  }
+
+  .profile {
+    margin: 0 !important;
+
+    .user-details-links {
+      display: none !important;
+    }
+
+    .user-details {
+      display: inherit !important;
+      margin-left: 8px;
+    }
+  }
+
+  .details {
+    margin: 0 !important;
+  }
+}
+
+:host {
+  > div {
+    position: absolute;
+    margin: 8px 32px;
+  }
+}
+
+ngx-qrcode {
+  canvas {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.profile {
+  margin: 8px;
+
+  .userName {
+    font-size: 34px;
+  }
+
+  .avatar {
+    > img {
+      width: 100px;
+    }
+  }
+
+  .user-details-links {
+    margin-top: 16px;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  img.qr-code {
+    width: 100px;
+    height: 100px;
+  }
+
+  .blurb {
+    margin-top: 8px;
+  }
+
+
+  .website {
+    color: blue;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+  .email {
+    color: #3f75e5;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+  .linked-in {
+    color: $linkedin_color;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+  .facebook {
+    color: $facebook_color;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+  .twitter {
+    color: $twitter_color;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+  .github {
+    color: $github_color;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+
+  .user-details {
+    .fa {
+      opacity: 1;
+      font-size: 1.5em;
+      text-align: center;
+    }
+  }
+}
+
+.details {
+  margin: 8px;
+
+  .title {
+    margin-top: 8px;
+    border-bottom: black solid 1px;
+  }
+
+  .history {
+    .job {
+      margin: 8px 0 8px 8px;
+    }
+    .bullets {
+      margin: 0;
+    }
+  }
+
+  .skill-sets {
+    margin-top: 10px;
+
+    > div > div {
+      margin-left: 16px;
+    }
+
+    .skill-title {
+      margin: 8px 0 4px 0;
+      border-bottom: black solid 1px;
+    }
+    .skill-level-container {
+      -webkit-print-color-adjust: exact;
+      background-color: $outline1;
+      margin-bottom: 4px;
+    }
+    .skill-level {
+      height: 8px;
+
+      &.professional {
+        background-color: $action;
+      }
+      &.competent {
+        background-color: $warning;
+      }
+      &.novice {
+        background-color: $error;
+      }
+    }
+  }
+}

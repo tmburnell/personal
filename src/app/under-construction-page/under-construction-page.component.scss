@@ -1,0 +1,43 @@
+:host {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    //> div {
+    //    height: 100%;
+    //    width: 100%;
+    //    position: absolute;
+    //
+    //    &.links {
+    //        margin: 20px 0 0 0;
+    //        button {
+    //            min-height: 200px;
+    //            margin: 20px 0;
+    //        }
+    //    }
+    //}
+
+    .message {
+        margin-top: 8%;
+    }
+
+    h1 {
+        font-size: 45px;
+        text-transform: uppercase;
+    }
+    h3.header{
+        font-style: italic;
+        font-weight: 200;
+        font-size: 30px;
+    }
+
+    hr {
+        width: 500px;
+    }
+
+    p {
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,101 @@
+{
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": [
+        {
+          "name": "JavaScript / NodeJs",
+          "level": 100
+        },
+        {
+          "name": "HTML5/CSS",
+          "level": 90
+        },
+        {
+          "name": "Java",
+          "level": 85
+        },
+        {
+          "name": "Bash",
+          "level": 80
+        },
+        {
+          "name": "Packer",
+          "level": 30
+        },
+        {
+          "name": ".Net",
+          "level": 40
+        },
+        {
+          "name": "SQL",
+          "level": 90
+        },
+        {
+          "name": "Go",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "title": "Frameworks",
+      "skills": [
+        {
+          "name": "Angular",
+          "level": 95,
+          "description": "AngularJS and Angular 2+"
+        },
+        {
+          "name": "ExtJs",
+          "level": 95
+        },
+        {
+          "name": "Scss, Sass, Stylus",
+          "level": 95
+        },
+        {
+          "name": "Spring",
+          "level": 85,
+          "description": "SpringData, SpringZuul, SpringSecurity, hibernate, etc..."
+        },
+        {
+          "name": "Jasmine, Karma, Mocha, Chai, Gherkin, JUnit",
+          "level": 80
+        },
+        {
+          "name": "backbone & handlebars",
+          "level": 70
+        },
+        {
+          "name": "JQuery",
+          "level": 70
+        },
+        {
+          "name": "Docker/containers",
+          "level": 60
+        },
+        {
+          "name": "Openshift",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "title": "Points of Interest",
+      "skills": [
+        {
+          "name": "Application Architecture",
+          "level": 90
+        },
+        {
+          "name": "Application Security",
+          "level": 80
+        },
+        {
+          "name": "Leading a team",
+          "level": 70
+        }
+      ]
+    }
+  ]
+}

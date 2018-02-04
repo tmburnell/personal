@@ -1,0 +1,14 @@
+:host-context {
+    ::ng-deep {
+        .mat-tab-nav-bar {
+            border: 0;
+        }
+
+        .hide-ink-bar {
+            > div > .mat-ink-bar {
+                visibility: hidden !important;
+                transition: unset;
+            }
+        }
+    }
+}
