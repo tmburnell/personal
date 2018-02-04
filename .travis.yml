@@ -13,7 +13,7 @@ after_success:
   - SOURCE_DIR=${PWD##*/}
   - TARGET_DIR=$TARGET_BRANCH
   - REPO=`git config remote.origin.url`
-  - PROJECT=`echo $REPO | sed 's/.*://'`
+  - PROJECT=`echo $REPO | sed 's/.*github.com//' | sed 's/.*://'`
 
   # Clone my repo one folder up for gh-pages version
   - cd ..
@@ -33,6 +33,8 @@ after_success:
 
   # copy files from dist to gh-page branch
   - cp -R ../$SOURCE_DIR/dist/* ../$TARGET_DIR
+
+  - cat ./index.html >> ./404.html
 
   # setup user
   - git config user.name "Travis CI"
