@@ -9,7 +9,7 @@
     "run-cli-api": "ng serve --proxy-config api.proxy.conf.json",
     "run-cli-mocks": "ng serve --proxy-config mock.proxy.conf.json",
     "run-mocks": "node --inspect server.js",
-    "build": "ng build --aot=true --prod --base-href='/personal/'",
+    "build": "ng build --aot=true --prod --base-href='/personal/' --deployUrl='//tmburnell.github.io/personal/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
