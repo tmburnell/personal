@@ -13,7 +13,7 @@ after_success:
   - SOURCE_DIR=${PWD##*/}
   - TARGET_DIR=$TARGET_BRANCH
   - REPO=`git config remote.origin.url`
-  - PROJECT=`echo $REPO | sed 's/.*github.com//' | sed 's/.*://'`
+  - PROJECT=`echo $REPO | sed 's/.*github.com//' | sed -e 's/^[//]*//' | sed -e 's/^[:]*//'`
 
   # Clone my repo one folder up for gh-pages version
   - cd ..
