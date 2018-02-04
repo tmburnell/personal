@@ -25,7 +25,7 @@ after_success:
   - git clean -f -d
 
   # fetch and Checkout gh-page branch
-  - git fetch origin
+  - git pull origin
 
   # remove existing files
   - rm -rf ./*
