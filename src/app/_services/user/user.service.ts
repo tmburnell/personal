@@ -15,6 +15,7 @@ export class UserService {
   }
 
   getMockUser(): Observable<User> {
-    return this.http.get('app/_services/user/mocks/user.data.json').map((res:any) => res.user as User);
+    return this.http.get('https://cdn.rawgit.com/tmburnell/personal/gh-pages/app/_services/user/mocks/user.data.json')
+        .map((res:any) => res.user as User);
   }
 }

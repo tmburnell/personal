@@ -15,6 +15,7 @@ export class SkillsService {
   }
 
   getMockSkills(): Observable<Array<SkillSet>> {
-    return this.http.get('app/_services/skills/mocks/skills.data.json').map((res:any) => res.skills as Array<SkillSet>);
+    return this.http.get('https://cdn.rawgit.com/tmburnell/personal/gh-pages/app/_services/skills/mocks/skills.data.json')
+        .map((res:any) => res.skills as Array<SkillSet>);
   }
 }

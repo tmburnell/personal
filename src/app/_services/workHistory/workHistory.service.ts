@@ -14,6 +14,7 @@ export class WorkHistoryService {
   }
 
   getMockWorkHistory(): Observable<Array<Experience>> {
-    return this.http.get('app/_services/workHistory/mocks/workHistory.data.json').map((res:any) => res.workHistory as Array<Experience>);
+    return this.http.get('https://cdn.rawgit.com/tmburnell/personal/gh-pages/app/_services/workHistory/mocks/workHistory.data.json')
+        .map((res:any) => res.workHistory as Array<Experience>);
   }
 }
