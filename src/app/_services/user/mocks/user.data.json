@@ -2,7 +2,7 @@
   "user": {
     "name": "Tim Burnell",
     "title": "Lead Software Engineer",
-    "avatar": "/assets/avatar.jpg",
+    "avatar": "./assets/avatar.jpg",
     "address": "",
     "phone": "",
     "links": {
