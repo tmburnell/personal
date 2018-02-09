@@ -6,7 +6,7 @@
                 <div fxFlex class="name">
                     <div class="userName">{{user?.name}}</div>
                     <div *ngIf="user?.title">{{user.title}}</div>
-                    <div class="user-details-links" fxLayoutGap="8px" fxHide fxShow.sm fxShow.xs>
+                    <div class="user-details-links" fxLayoutGap="8px" fxHide fxShow.xs>
                         <a *ngIf="user?.links?.website" fa name="globe" size="2" class="website" [href]="user.links.website.url"></a>
                         <a *ngIf="user?.links?.email" fa name="envelope" size="2" class="email" [href]="'mailto:' + user.links.email.url"></a>
                         <a *ngIf="user?.links?.linkedIn" fa name="linkedin" size="2" class="linked-in" [href]="user.links.linkedIn.url"></a>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <qrcode *ngIf="qrData" [qrdata]="qrData" size=100 level="L"></qrcode>
-            <div class="user-details" fxShow fxHide.sm fxHide.xs>
+            <div class="user-details" fxShow fxHide.xs>
                 <div fxLayout="row">
                     <div fxFlex fxLayout="column">
                         <div *ngFor="let detail of user | keys">
@@ -98,13 +98,15 @@
                     </div>
                 </div>
             </div>
-            <div fxFlex="25" fxLayout="column" class="skill-sets">
+            <div fxLayout="column" class="skill-sets">
                 <div *ngFor="let skillset of skillSets">
                     <h4 class="skill-title">{{skillset.title}}</h4>
                     <div *ngFor="let skill of skillset.skills" fxLayout="column">
-                        <h5>{{skill.name}}</h5>
-                        <div fxLayout="row" class="skill-level-container">
-                            <div [fxFlex]="skill.level" [ngClass]="['skill-level', getSkillLevelQuality(skill.level)]"></div>
+                        <div class="skill-level-container">
+                            <h5>{{skill.name}}</h5>
+                            <div>
+                                <i *ngFor="let i of getSkillLevel(skill.level)">&#x2588;</i>
+                            </div>
                         </div>
                     </div>
                 </div>

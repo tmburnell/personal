@@ -28,6 +28,5 @@ export class AppHeaderComponent implements OnInit {
 
   printPage() {
     window.print();
-    // TODO: print Page.
   }
 }

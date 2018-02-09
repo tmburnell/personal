@@ -1,4 +1,6 @@
 @import '../../style-vars';
+@import "../../_utils.scss";
+
 
 $facebook_color           : hsla(222, 47%, 40%, 1);     // #365397
 $twitter_color            : hsla(198, 100%, 47%, 1);    // #00a9f1
@@ -42,11 +44,8 @@ $github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
   }
 }
 
-:host {
-  > div {
-    position: absolute;
-    margin: 8px 32px;
-  }
+.page {
+  margin: 8px !important;
 }
 
 ngx-qrcode {
@@ -61,7 +60,8 @@ ngx-qrcode {
 }
 
 .profile {
-  margin: 8px;
+  max-width: 1024px;
+  margin: 0 auto 8px auto;
 
   .userName {
     font-size: 34px;
@@ -70,6 +70,7 @@ ngx-qrcode {
   .avatar {
     > img {
       width: 100px;
+      @include border-radius(30px);
     }
   }
 
@@ -151,7 +152,8 @@ ngx-qrcode {
 }
 
 .details {
-  margin: 8px;
+  max-width: 1024px;
+  margin: 8px auto 0 auto;
 
   .title {
     margin-top: 8px;
@@ -179,12 +181,54 @@ ngx-qrcode {
       border-bottom: black solid 1px;
     }
     .skill-level-container {
-      -webkit-print-color-adjust: exact;
-      background-color: $outline1;
-      margin-bottom: 4px;
+      //-webkit-print-color-adjust: exact;
+      //background-color: $outline1;
+      //margin-bottom: 4px;
+
+      position: relative;
+      //height: 34px;
+      @include animation(from-left $transition-speed * 2);
+
+      //h5 {
+      //  position: absolute;
+      //  z-index: 1;
+      //}
+      div {
+        height: 14px;
+        width: 200px;
+      }
+      i {
+        position: absolute;
+        //top: 7px;
+        z-index: -1;
+      }
+
+
+      @for $i from 1 through 11 {
+        i:nth-child(#{$i}) {
+          $anim-speed: ($transition-speed + ($i * 100));
+          @include animation(i#{$i}-from-left $anim-speed);
+          animation-delay: 200ms;
+          animation-fill-mode: forwards;
+          color: mix($action, $primary, $i * 9);
+        }
+
+        @include keyframes(i#{$i}-from-left) {
+          from {
+            @include opacity(0);
+            left: 0px;
+          }
+          to {
+            @include opacity(1);
+            left: 1px + ($i * 20px);
+          }
+        }
+      }
     }
     .skill-level {
       height: 8px;
+
+
 
       &.professional {
         background-color: $action;

@@ -131,4 +131,12 @@ export class ResumePageComponent implements OnInit {
             return level >= skillLevel.min && level <= skillLevel.max;
         }).map(res => res.name as string)[0];
     }
+
+    getSkillLevel(n:number): Array<any> {
+        return this.getArray(Math.floor(n / 10));
+    }
+
+    getArray(i:number): Array<any> {
+        return new Array(i);
+    }
 }

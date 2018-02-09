@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './style-vars';
-@import './app.theme';
+@import './_theme';
+@import "./_utils.scss";
 @import '~font-awesome/css/font-awesome.css';
-@import './material.theme';
-
-

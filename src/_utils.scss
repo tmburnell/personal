@@ -1,0 +1,97 @@
+// General
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+// Breakpoints
+@mixin breakpoint($break) {
+  @if $break == xl {
+    @media (max-width: 1420px) {
+      @content;
+    }
+  } @else if $break == lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $break == md {
+    @media (max-width: 968px) {
+      @content;
+    }
+  } @else if $break == sm {
+    @media (max-width: 840px) {
+      @content;
+    }
+  } @else if $break == xs {
+    @media (max-width: 540px) {
+      @content;
+    }
+  } @else if $break == xxs {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else {
+    @media ($break) {
+      @content;
+    }
+  }
+}
+
+// Animation
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
