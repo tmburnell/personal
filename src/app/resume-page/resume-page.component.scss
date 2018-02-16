@@ -53,8 +53,15 @@ $github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
 }
 
 .page {
-  margin: 8px !important;
+  margin: 8px 0 !important;
 }
+
+@media (max-width: 1024px) {
+  .page {
+    margin: 8px !important;
+  }
+}
+
 
 ngx-qrcode {
   canvas {
@@ -79,6 +86,7 @@ ngx-qrcode {
     > img {
       width: 100px;
       @include border-radius(30px);
+      box-shadow: 2px 2px 5px $outline2;
     }
   }
 

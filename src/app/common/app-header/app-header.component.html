@@ -4,7 +4,8 @@
       <app-nav [(navConfig)]="navConfig" (navChange)="navChange.emit($event)"></app-nav>
   </div>
   <div fxLayout="column" fxLayoutAlign="center end">
-      <fa name="print" size='2' (click)="printPage()" class="clickable"></fa>
-    <!--<mat-icon (click)="printPage()" class="print">print</mat-icon>-->
+    <button mat-mini-fab (click)="printPage()">
+      <fa name="print" size='1'></fa>
+    </button>
   </div>
 </div>

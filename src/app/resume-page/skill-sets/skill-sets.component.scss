@@ -25,6 +25,7 @@
         > i {
           float: left;
           width: $skill-width;
+          text-shadow: 2px 2px 2px $outline2;
 
           @include opacity(0);
         }
@@ -40,10 +41,11 @@
       @for $s from 1 through 10 {
         .skill:nth-child(#{$s}) {
           $skill-delay: $group-delay + ($g * $s * 30ms) - 430ms;
-          $skill-speed: $transition-speed;
-          @include animation(into-view $skill-speed forwards);
+          $skill-speed: 2s;
+          @include animation(flip-in-x $skill-speed);
+          @include animation-fill-mode(both);
           animation-delay: ($skill-delay) + ($s * 50ms) - 450ms;
-          transform: translateX(25px);
+          //transform: translateX(25px);
 
           .skill-level {
             @for $i from 1 through 10 {
@@ -62,55 +64,27 @@
   }
 }
 
-.skill-level-container {
-  position: relative;
-  @include animation(from-left $transition-speed * 2);
-
-  @for $i from 1 through 11 {
-    i:nth-child(#{$i}) {
-      $anim-speed: ($transition-speed + ($i * 100));
-      @include animation(i#{$i}-from-left $anim-speed);
-      animation-delay: 200ms;
-      animation-fill-mode: forwards;
-      color: mix($action, $primary, $i * 9);
-    }
-
-    @include keyframes(i#{$i}-from-left) {
-      from {
-        @include opacity(0);
-        left: 0px;
-      }
-      to {
-        @include opacity(1);
-        left: 1px + ($i * 20px);
-      }
-    }
+@include keyframes(flip-in-x) {
+  0% {
+    @include transform(perspective(400px) rotate3d(1, 0, 0, 90deg));
+    @include transition-timing(ease-in);
+    @include opacity(0);
+  }
+  //40% {
+  //  @include transform(perspective(400px) rotate3d(1, 0, 0, 30deg));
+  //  @include transition-timing(ease-in);
+  //}
+  60% {
+    @include transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
+    @include opacity(1);
+  }
+  //80% {
+  //  @include transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
+  //}
+  100% {
+    @include transform(perspective(400px));
   }
 }
-
-//@for $i from 1 through 6 {
-//  section:nth-child(#{$i}) {
-//    h3 {
-//      @include animation(into-view $transition-speed);
-//      animation-delay: (650ms * $i) - 649ms;
-//      transform: translateY(50px);
-//    }
-//
-//    @for $j from 1 through 6 {
-//      article:nth-child(#{$j}) {
-//        @include animation(into-view $transition-speed);
-//        animation-delay: (600ms * $i) + (100ms * $j) - 699ms;
-//        transform: translateY(50px);
-//
-//        @for $h from 1 through 5 {
-//          .mat-chip:nth-child(#{$h}) {
-//            animation-delay: (300ms - (50ms * $h)) + (100ms * $j);
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
 
 @include keyframes(into-view) {
   from {
