@@ -6,6 +6,12 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .header {
+    padding: 0 !important;
+  }
+}
+
 :host-context {
   .header {
     height: 48px;
