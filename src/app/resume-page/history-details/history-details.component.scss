@@ -1,0 +1,17 @@
+:host-context {
+  .title {
+    margin-top: 8px;
+    border-bottom: black solid 1px;
+  }
+
+  > div {
+    margin: 8px 0 8px 8px;
+
+    .details {
+      margin-left: 8px;
+    }
+    .bullets {
+      margin: 0;
+    }
+  }
+}

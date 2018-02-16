@@ -1,0 +1,21 @@
+<h1 class="title"><fa [name]="icon"></fa> {{title}}</h1>
+<div *ngFor="let place of data">
+  <div fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="8px">
+    <div fxFlex="65" fxLayoutAlign="space-between end">
+      <h2>{{place.title}}</h2>
+      <div fxFlex="none" *ngIf="place.company">{{place.company}}</div>
+    </div>
+    <ng-container *ngIf="nullEndDateText; then displayEndText; else displayBlank"></ng-container>
+
+    <ng-template #displayEndText>
+      <span>{{place.startDate}} - {{place.endDate ? place.endDate : nullEndDateText}}</span>
+    </ng-template>
+    <ng-template #displayBlank>
+      <span>{{place.startDate ? place.startDate + '-' : ''}} {{place.endDate}}</span>
+    </ng-template>
+  </div>
+  <div class="details">{{place.description}}</div>
+  <ul *ngIf="place.bullets" class="bullets">
+    <li *ngFor="let bullet of place.bullets">{{bullet}}</li>
+  </ul>
+</div>

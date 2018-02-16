@@ -169,21 +169,7 @@ ngx-qrcode {
 
 .details {
   max-width: 1024px;
-  margin: 8px auto 0 auto;
-
-  .title {
-    margin-top: 8px;
-    border-bottom: black solid 1px;
-  }
-
-  .history {
-    .job {
-      margin: 8px 0 8px 8px;
-    }
-    .bullets {
-      margin: 0;
-    }
-  }
+  margin: 0 auto;
 
   app-skill-sets {
     margin-top: 10px;

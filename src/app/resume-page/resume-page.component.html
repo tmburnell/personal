@@ -61,42 +61,17 @@
     <div class="details">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between" fxLayoutGap="24px">
             <div flex class="history" fxLayout="column">
-                <div class="work">
-                    <h1 *ngIf="workHistory?.length > 0" class="title"><fa name="building"></fa> Work Experience</h1>
-                    <div *ngFor="let job of workHistory" class="job">
-                        <div fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="8px">
-                            <div fxFlex="65" fxLayoutAlign="space-between end">
-                                <h2 >{{job.title}}</h2>
-                                <div fxFlex="none" *ngIf="job.company">{{job.company}}</div>
-                            </div>
-                            <div class="date-range">
-                                {{job.startDate}} - {{job.endDate ? job.endDate : 'present'}}
-                            </div>
-                        </div>
-                        <div class="details">{{job.description}}</div>
-                        <ul *ngIf="job.bullets" class="bullets">
-                            <li *ngFor="let bullet of job.bullets">{{bullet}}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="education">
-                    <h1 *ngIf="education?.length > 0" class="title"><fa name="graduation-cap"></fa> Education</h1>
-                    <div *ngFor="let school of education" class="job">
-                        <div fxLayout="row" fxLayoutAlign="space-between end">
-                            <div fxFlex="65" fxLayoutAlign="space-between end">
-                                <h2 >{{school.title}}</h2>
-                                <div *ngIf="school.company">{{school.company}}</div>
-                            </div>
-                            <div class="date-range">
-                                {{school.startDate ? school.startDate + '-' : ''}} {{school.endDate}}
-                            </div>
-                        </div>
-                        <div class="details">{{school.description}}</div>
-                        <ul *ngIf="school.bullets" class="bullets">
-                            <li *ngFor="let bullet of school.bullets">{{bullet}}</li>
-                        </ul>
-                    </div>
-                </div>
+              <app-history-details *ngIf="workHistory?.length"
+                                   [data]="workHistory"
+                                   icon="building"
+                                   title="Work Experience"
+                                   nullEndDateText="present"
+              ></app-history-details>
+              <app-history-details *ngIf="education?.length"
+                                   [data]="education"
+                                   icon="graduation-cap"
+                                   title="Education"
+              ></app-history-details>
             </div>
             <app-skill-sets [data]="skillSets" fxLayout="column"></app-skill-sets>
         </div>
