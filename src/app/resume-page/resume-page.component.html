@@ -59,7 +59,7 @@
         <div class="blurb" *ngIf="user?.blurb">{{user.blurb}}</div>
     </div>
     <div class="details">
-        <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="24px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between" fxLayoutGap="24px">
             <div flex class="history" fxLayout="column">
                 <div class="work">
                     <h1 *ngIf="workHistory?.length > 0" class="title"><fa name="building"></fa> Work Experience</h1>

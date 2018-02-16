@@ -96,25 +96,26 @@ export class ResumePageComponent implements OnInit {
     }
 
     updateQrData() {
-        let qrData = "",
-            capKey;
+        // let qrData = "",
+        //     capKey;
+        //
+        // Object.entries(this.user).forEach(([key, value]) => {
+        //     if (key == "links") {
+        //         Object.entries(value).forEach(([key, value]) => {
+        //             if (value && value.url) {
+        //                 capKey = this.capitalize.transform(key, false);
+        //                 qrData += (qrData.length > 0) ? `\n${capKey}: ${value.url}` : `${capKey}: ${value.url}`;
+        //             }
+        //         });
+        //     } else if (this.shouldDisplayUserDetail({key: key, value: value})) {
+        //         capKey = this.capitalize.transform(key, false);
+        //
+        //         qrData += (qrData.length > 0) ? `\n${capKey}: ${value}` : `${capKey}: ${value}`;
+        //     }
+        // });
 
-        Object.entries(this.user).forEach(([key, value]) => {
-            if (key == "links") {
-                Object.entries(value).forEach(([key, value]) => {
-                    if (value && value.url) {
-                        capKey = this.capitalize.transform(key, false);
-                        qrData += (qrData.length > 0) ? `\n${capKey}: ${value.url}` : `${capKey}: ${value.url}`;
-                    }
-                });
-            } else if (this.shouldDisplayUserDetail({key: key, value: value})) {
-                capKey = this.capitalize.transform(key, false);
 
-                qrData += (qrData.length > 0) ? `\n${capKey}: ${value}` : `${capKey}: ${value}`;
-            }
-        });
-
-        this.qrData = qrData;
+        this.qrData = document.location.href;
     }
 
     isURL(value: string): boolean {
