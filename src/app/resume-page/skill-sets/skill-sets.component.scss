@@ -1,0 +1,123 @@
+@import '../../../style-vars';
+@import "../../../_utils.scss";
+
+:host-context {
+  h4 {
+    margin: 8px 0 4px 0;
+    border-bottom: black solid 1px;
+  }
+
+  $skill-width: 14px;
+
+  .skill-grouping {
+    > h4 {
+      margin: 8px 0 4px 0;
+      border-bottom: black solid 1px;
+    }
+
+    .skill{
+      padding-left: 16px;
+
+      .skill-level {
+        padding-left: 16px;
+        width: 160px;
+
+        > i {
+          float: left;
+          width: $skill-width;
+
+          @include opacity(0);
+        }
+      }
+    }
+  }
+
+  @for $g from 1 through 10 {
+    .skill-grouping:nth-child(#{$g}) {
+      $group-delay: ($g * 400ms) - 400ms;
+      $group-speed: $transition-speed / 2;
+
+      @for $s from 1 through 10 {
+        .skill:nth-child(#{$s}) {
+          $skill-delay: $group-delay + ($g * $s * 30ms) - 430ms;
+          $skill-speed: $transition-speed;
+          @include animation(into-view $skill-speed forwards);
+          animation-delay: ($skill-delay) + ($s * 50ms) - 450ms;
+          transform: translateX(25px);
+
+          .skill-level {
+            @for $i from 1 through 10 {
+              i:nth-child(#{$i}) {
+                $anim-speed: 2000ms - ($i * 50);
+                @include animation(into-view $anim-speed forwards);
+                animation-delay: ($skill-delay) + ($i * 50ms) - 450ms;
+                transform: translateX($skill-width + (-$skill-width * $i));
+                color: mix($action, $primary, $i * 9);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.skill-level-container {
+  position: relative;
+  @include animation(from-left $transition-speed * 2);
+
+  @for $i from 1 through 11 {
+    i:nth-child(#{$i}) {
+      $anim-speed: ($transition-speed + ($i * 100));
+      @include animation(i#{$i}-from-left $anim-speed);
+      animation-delay: 200ms;
+      animation-fill-mode: forwards;
+      color: mix($action, $primary, $i * 9);
+    }
+
+    @include keyframes(i#{$i}-from-left) {
+      from {
+        @include opacity(0);
+        left: 0px;
+      }
+      to {
+        @include opacity(1);
+        left: 1px + ($i * 20px);
+      }
+    }
+  }
+}
+
+//@for $i from 1 through 6 {
+//  section:nth-child(#{$i}) {
+//    h3 {
+//      @include animation(into-view $transition-speed);
+//      animation-delay: (650ms * $i) - 649ms;
+//      transform: translateY(50px);
+//    }
+//
+//    @for $j from 1 through 6 {
+//      article:nth-child(#{$j}) {
+//        @include animation(into-view $transition-speed);
+//        animation-delay: (600ms * $i) + (100ms * $j) - 699ms;
+//        transform: translateY(50px);
+//
+//        @for $h from 1 through 5 {
+//          .mat-chip:nth-child(#{$h}) {
+//            animation-delay: (300ms - (50ms * $h)) + (100ms * $j);
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+@include keyframes(into-view) {
+  from {
+  }
+  to {
+    @include opacity(1);
+    @include transform(translate(0, 0));
+  }
+}
+

@@ -21,7 +21,7 @@
         },
         {
           "name": "Packer",
-          "level": 30
+          "level": 40
         },
         {
           "name": ".Net",
@@ -33,7 +33,7 @@
         },
         {
           "name": "Go",
-          "level": 10
+          "level": 30
         }
       ]
     },
@@ -84,7 +84,7 @@
       "title": "Points of Interest",
       "skills": [
         {
-          "name": "Application Architecture",
+          "name": "Architecture",
           "level": 90
         },
         {

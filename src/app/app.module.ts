@@ -18,7 +18,12 @@ import {Angular2FontawesomeModule} from 'angular2-fontawesome/angular2-fontaweso
 
 import {AppComponent} from './app.component';
 import {UnderConstructionPageComponent} from './under-construction-page'
-import {ResumePageComponent} from './resume-page';
+
+import {ResumePageComponent, SkillSetsComponent} from './resume-page';
+const ResumePage = [
+  ResumePageComponent,
+  SkillSetsComponent
+];
 
 import {EducationService, SkillsService, UserService, WorkHistoryService} from 'app/_services';
 const Services = [
@@ -43,7 +48,7 @@ const CommonComponents = [
         AppComponent,
         CommonComponents,
 
-        ResumePageComponent,
+        ResumePage,
         UnderConstructionPageComponent
     ],
     imports: [

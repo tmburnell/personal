@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="start center" class="header noprint">
   <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-      <div class="appHeader" routerLink="/resume">{{user?.name}}'s</div>
+      <div class="appHeader" routerLink="/resume" *ngIf="user">{{user.name}}'s</div>
       <app-nav [(navConfig)]="navConfig" (navChange)="navChange.emit($event)"></app-nav>
   </div>
   <div fxLayout="column" fxLayoutAlign="center end">

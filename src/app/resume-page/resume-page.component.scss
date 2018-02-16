@@ -41,6 +41,14 @@ $github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
 
   .details {
     margin: 0 !important;
+
+    > div {
+      flex-direction: row !important;
+
+      .history {
+        margin-right: 24px;
+      }
+    }
   }
 }
 
@@ -169,76 +177,7 @@ ngx-qrcode {
     }
   }
 
-  .skill-sets {
+  app-skill-sets {
     margin-top: 10px;
-
-    > div > div {
-      margin-left: 16px;
-    }
-
-    .skill-title {
-      margin: 8px 0 4px 0;
-      border-bottom: black solid 1px;
-    }
-    .skill-level-container {
-      //-webkit-print-color-adjust: exact;
-      //background-color: $outline1;
-      //margin-bottom: 4px;
-
-      position: relative;
-      //height: 34px;
-      @include animation(from-left $transition-speed * 2);
-
-      //h5 {
-      //  position: absolute;
-      //  z-index: 1;
-      //}
-      div {
-        height: 14px;
-        width: 200px;
-      }
-      i {
-        position: absolute;
-        //top: 7px;
-        z-index: -1;
-      }
-
-
-      @for $i from 1 through 11 {
-        i:nth-child(#{$i}) {
-          $anim-speed: ($transition-speed + ($i * 100));
-          @include animation(i#{$i}-from-left $anim-speed);
-          animation-delay: 200ms;
-          animation-fill-mode: forwards;
-          color: mix($action, $primary, $i * 9);
-        }
-
-        @include keyframes(i#{$i}-from-left) {
-          from {
-            @include opacity(0);
-            left: 0px;
-          }
-          to {
-            @include opacity(1);
-            left: 1px + ($i * 20px);
-          }
-        }
-      }
-    }
-    .skill-level {
-      height: 8px;
-
-
-
-      &.professional {
-        background-color: $action;
-      }
-      &.competent {
-        background-color: $warning;
-      }
-      &.novice {
-        background-color: $error;
-      }
-    }
   }
 }

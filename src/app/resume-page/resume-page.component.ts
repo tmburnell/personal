@@ -96,48 +96,6 @@ export class ResumePageComponent implements OnInit {
     }
 
     updateQrData() {
-        // let qrData = "",
-        //     capKey;
-        //
-        // Object.entries(this.user).forEach(([key, value]) => {
-        //     if (key == "links") {
-        //         Object.entries(value).forEach(([key, value]) => {
-        //             if (value && value.url) {
-        //                 capKey = this.capitalize.transform(key, false);
-        //                 qrData += (qrData.length > 0) ? `\n${capKey}: ${value.url}` : `${capKey}: ${value.url}`;
-        //             }
-        //         });
-        //     } else if (this.shouldDisplayUserDetail({key: key, value: value})) {
-        //         capKey = this.capitalize.transform(key, false);
-        //
-        //         qrData += (qrData.length > 0) ? `\n${capKey}: ${value}` : `${capKey}: ${value}`;
-        //     }
-        // });
-
-
         this.qrData = document.location.href;
-    }
-
-    isURL(value: string): boolean {
-        const urlReg = new RegExp(/[-a-zA-Z0-9:%_\+.~#//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:_\+.~#?&//=]*)?/);
-        return !!(value && value.match(urlReg));
-    }
-
-    isEmail(value: string): boolean {
-        return !!(value && value.indexOf('@') > -1);
-    }
-
-    getSkillLevelQuality(level: number): string {
-        return this.skillLevel.filter(skillLevel => {
-            return level >= skillLevel.min && level <= skillLevel.max;
-        }).map(res => res.name as string)[0];
-    }
-
-    getSkillLevel(n:number): Array<any> {
-        return this.getArray(Math.floor(n / 10));
-    }
-
-    getArray(i:number): Array<any> {
-        return new Array(i);
     }
 }

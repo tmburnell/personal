@@ -98,19 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div fxLayout="column" class="skill-sets">
-                <div *ngFor="let skillset of skillSets">
-                    <h4 class="skill-title">{{skillset.title}}</h4>
-                    <div *ngFor="let skill of skillset.skills" fxLayout="column">
-                        <div class="skill-level-container">
-                            <h5>{{skill.name}}</h5>
-                            <div>
-                                <i *ngFor="let i of getSkillLevel(skill.level)">&#x2588;</i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <app-skill-sets [data]="skillSets" fxLayout="column"></app-skill-sets>
         </div>
     </div>
 </div>

@@ -1,0 +1,9 @@
+<div *ngFor="let skillset of data" class="skill-grouping">
+  <h4>{{skillset.title}}</h4>
+  <div *ngFor="let skill of skillset.skills" fxLayout="column" class="skill">
+    <h5>{{skill.name}}</h5>
+    <div class="skill-level">
+      <i *ngFor="let i of getSkillLevel(skill.level)">&#x2588;</i>
+    </div>
+  </div>
+</div>
