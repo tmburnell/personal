@@ -37,6 +37,10 @@ $github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
       display: inherit !important;
       margin-left: 8px;
     }
+
+    qrcode {
+      display: inherit !important;
+    }
   }
 
   .details {
@@ -63,11 +67,8 @@ $github_color             : hsla(0, 0%, 18%, 1);        // #2f2f2f
 }
 
 
-ngx-qrcode {
-  canvas {
-    height: 100px;
-    width: 100px;
-  }
+qrcode {
+  display: none;
 }
 
 .bold {
@@ -112,6 +113,7 @@ ngx-qrcode {
   .website {
     color: blue;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1
@@ -120,6 +122,7 @@ ngx-qrcode {
   .email {
     color: #3f75e5;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1
@@ -128,6 +131,7 @@ ngx-qrcode {
   .linked-in {
     color: $linkedin_color;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1
@@ -136,6 +140,7 @@ ngx-qrcode {
   .facebook {
     color: $facebook_color;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1
@@ -144,6 +149,7 @@ ngx-qrcode {
   .twitter {
     color: $twitter_color;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1
@@ -152,6 +158,7 @@ ngx-qrcode {
   .github {
     color: $github_color;
     opacity: .8;
+    text-decoration: none;
 
     &:hover {
       opacity: 1

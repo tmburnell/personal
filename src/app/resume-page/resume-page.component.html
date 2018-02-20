@@ -1,4 +1,4 @@
-<div fxFill class="page">
+<div class="page">
     <div class="profile">
         <div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="8px">
             <div fxFlex fxLayout="row" fxLayoutGap="10px">
@@ -28,27 +28,39 @@
                         </div>
                         <div fxLayout="column" fxLayoutGap="8px">
                             <div *ngIf="user?.links?.website" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="globe"  class="website"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.website" fa name="globe" class="website" [href]="user.links.website.url"></a>
+                                </div>
                                 <a [href]="user.links.website.url">{{user.links.website.url}}</a>
                             </div>
                             <div *ngIf="user?.links?.email" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="envelope"  class="email"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.email" fa name="envelope" class="email" [href]="'mailto:' + user.links.email.url"></a>
+                                </div>
                                 <a [href]="'mailto:' + user.links.email.url">{{user.links.email.url}}</a>
                             </div>
                             <div *ngIf="user?.links?.linkedIn" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="linkedin"  class="linked-in"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.linkedIn" fa name="linkedin" class="linked-in" [href]="user.links.linkedIn.url"></a>
+                                </div>
                                 <a [href]="user.links.linkedIn.url">{{user.links.linkedIn.url}}</a>
                             </div>
                             <div *ngIf="user?.links?.facebook" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="facebook-f"  class="facebook"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.facebook" fa name="facebook-f" class="facebook" [href]="user.links.facebook.url"></a>
+                                </div>
                                 <a [href]="user.links.facebook.url">{{user.links.facebook.url}}</a>
                             </div>
                             <div *ngIf="user?.links?.twitter" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="twitter"  class="twitter"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.twitter" fa name="twitter" class="twitter" [href]="user.links.twitter.url"></a>
+                                </div>
                                 <a [href]="user.links.twitter.url">{{user.links.twitter.url}}</a>
                             </div>
                             <div *ngIf="user?.links?.github" fxLayoutAlign="start center" fxLayoutGap="8px">
-                                <div fxFlex="20" fa name="github"  class="github"></div>
+                                <div fxFlex="20" fxLayoutAlign="center">
+                                  <a *ngIf="user?.links?.github" fa name="github" class="github" [href]="user.links.github.url"></a>
+                                </div>
                                 <a [href]="user.links.github.url">{{user.links.github.url}}</a>
                             </div>
                         </div>

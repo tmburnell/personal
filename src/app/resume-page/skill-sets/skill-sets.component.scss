@@ -35,7 +35,7 @@
 
   @for $g from 1 through 10 {
     .skill-grouping:nth-child(#{$g}) {
-      $group-delay: ($g * 400ms) - 400ms;
+      $group-delay: ($g * 500ms) + 200ms;
       $group-speed: $transition-speed / 2;
 
       @for $s from 1 through 10 {
@@ -66,32 +66,43 @@
 
 @include keyframes(flip-in-x) {
   0% {
-    @include transform(perspective(400px) rotate3d(1, 0, 0, 90deg));
+    @include transform(rotate3d(1, 0, 0, 90deg));
     @include transition-timing(ease-in);
     @include opacity(0);
   }
-  //40% {
-  //  @include transform(perspective(400px) rotate3d(1, 0, 0, 30deg));
-  //  @include transition-timing(ease-in);
-  //}
+  40% {
+    @include transform(perspective(400px) rotate3d(1, 0, 0, -20deg));
+    @include transition-timing(ease-in);
+  }
   60% {
-    @include transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
+    @include transform(rotate3d(1, 0, 0, 5deg));
     @include opacity(1);
   }
-  //80% {
-  //  @include transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
-  //}
+  80% {
+    @include transform(rotate3d(1, 0, 0, -10deg));
+  }
   100% {
-    @include transform(perspective(400px));
+    @include transform();
   }
 }
 
 @include keyframes(into-view) {
-  from {
+  0% {
+    @include opacity(0);
   }
-  to {
+  80% {
+
+    @include transform(translate(-20, 0));
+  }
+  100% {
     @include opacity(1);
     @include transform(translate(0, 0));
   }
+  //from {
+  //}
+  //to {
+  //  @include opacity(1);
+  //  @include transform(translate(0, 0));
+  //}
 }
 

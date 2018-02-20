@@ -19,7 +19,7 @@ export class ResumePageComponent implements OnInit {
     qrData: string;
 
     validDisplays = {
-        "name": true,
+        "name": false,
         "title": false,
         "avatar": false,
         "dob": true,

@@ -8,7 +8,7 @@
 
 @media (max-width: 1040px) {
   .header {
-    padding: 0 !important;
+    padding: 0 8px !important;
   }
 }
 
@@ -21,7 +21,6 @@
   }
 
   .appHeader {
-    margin: 0 8px;
     cursor: pointer;
   }
 
@@ -30,7 +29,7 @@
   }
 
   .print {
-    cursor: pointer;
+    font-size: 1.2em;
   }
 }
 
