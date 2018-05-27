@@ -5,48 +5,71 @@
       "company": "DST Systems",
       "startDate": "January 2018",
       "endDate": "",
-      "description": "Continued support and Development on the Pipeline application.  Started development on the Iaas platform utilizing packer and go to build the AWS platforms that our OpenShift platform can run on.",
-      "bullets": []
+      "description": "Research and Development",
+      "bullets": [
+        "Lead development on multiple application using (MIC) high-school interns, college interns, and entry level employees.",
+        "Coordinated the deployment of Openshift on aws and the setup of Eclipse Che (as a starter IDE).",
+        "Developed the companies first inner-sourced products."
+      ]
     },
     {
       "title": "Senior Software Engineer",
       "company": "DST Systems",
       "startDate": "January 2017",
       "endDate": "January 2018",
-      "description": "Lead a small team to develop two enterprise applications using a four-tier architecture (One for managing DST's big data platform, the second for managing DST's new cloud pipeline). I designed and developed an angular2 framework for developing these applications (including mocks system, authentication and authorization management, and unit tests). Lead the design of the API using SpringBoot for our server. These applications have been deployed to both Linux and on Openshift environments.",
-      "bullets": []
+      "description": "Development",
+      "bullets": [
+        "Lead a small team to develop two enterprise applications using a four-tier architecture (data platform and CICD platform).",
+        "Designed server and client side that support: Angular2+, mocks, authentication, authorization, and unit tests. ",
+        "Application designed to be deployed on a container environments."
+      ]
     },
     {
       "title": "Software Engineer",
       "company": "DST Systems",
       "startDate": "June 2015",
       "endDate": "January 2017",
-      "description": "DevOps: While retaining the support from my prior position started also managing servers, deployments of application, and developing multiple new applications. Developed some of DST first cloud native application using micro-services. Meanwhile up pushing for Api first approach in our application development. Also create a few cli’s that allowed for generating both AngularJS and springboot application to get new development up and running faster.",
-      "bullets": []
+      "description": "DevOps",
+      "bullets": [
+        "Retained support of products from prior position, while gaining management of servers and deployments.",
+        "Developed multiple new application, include the companies first micro-serviced environments.",
+        "Created cli project generators for Springboot and AngularJs (similar to angular2 cli)."
+      ]
     },
     {
       "title": "Senior Software Developer",
       "company": "DST Systems",
       "startDate": "June 2013",
       "endDate": "June 2015",
-      "description": "Solo web support person for up to 7 applications at the same time. Managed and maintained reporting of all security vulnerabilities for our business sector. I also was the solo developer for fixing security vulnerabilities of my application. Lead the architecture and development of an application rewrite from flex to ExtJs.",
-      "bullets": []
+      "description": "DevOps and support",
+      "bullets": [
+        "Sole web support person for up to 7 application at one time.",
+        "Managed and resolved security vulnerabilities accross all my applications.",
+        "Lead architecture and development on a flex to ExtJs rewrite."
+      ]
     },
     {
       "title": "Staff Software Developer",
       "company": "DST Systems",
       "startDate": "June 2011",
       "endDate": "June 2013",
-      "description": "Developed and Lead the Ticket assignment system for pooled client support (assigning work to associates domestic and abroad). Supporting multiple clients from daily mainframe maintenances to supporting web applications (where I was a SME). Designed multiple intraday scans for client reporting.",
-      "bullets": []
+      "description": "Client mainframe and web support",
+      "bullets": [
+        "Developed and Lead ticket assignment system for a pooled client support team (domestic and abroad).",
+        "Subject Matter Expert on client integrated web applications.",
+        "Supporting maintenance for multiple clients at once."
+      ]
     },
     {
       "title": "Software Developer",
       "company": "DST Systems",
       "startDate": "June 2008",
       "endDate": "June 2011",
-      "description": "Client mainframe support. Design and managed overseas teams for new application development. Managed SLA reporting and played a primary role in 3 successful conversions.",
-      "bullets": []
+      "description": "Client mainframe support.",
+      "bullets": [
+        "Designed and managed oversea development teams for new processes.",
+        "Managed and converted file transfers for 3 successful client conversions."
+      ]
     }
   ]
 }
