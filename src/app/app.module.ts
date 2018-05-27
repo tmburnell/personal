@@ -6,12 +6,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {QRCodeModule} from 'angularx-qrcode';
 
-import {MatTabsModule, MatSliderModule, MatButtonModule, MatMenuModule} from "@angular/material";
+import {MatTabsModule, MatSliderModule, MatButtonModule, MatMenuModule, MatTooltipModule} from "@angular/material";
 const MaterialModules = [
     MatTabsModule,
     MatSliderModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTooltipModule
 ];
 
 import {Angular2FontawesomeModule} from 'angular2-fontawesome/angular2-fontawesome'

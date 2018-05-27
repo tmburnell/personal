@@ -2,6 +2,9 @@
 @import "../../../_utils.scss";
 
 :host-context {
+  * {
+    cursor: default;
+  }
   h4 {
     margin: 8px 0 4px 0;
     border-bottom: black solid 1px;
