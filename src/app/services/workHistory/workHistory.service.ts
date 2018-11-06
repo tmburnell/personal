@@ -17,7 +17,7 @@ export class WorkHistoryService {
   }
 
   getMockWorkHistory(): Observable<Experiences> {
-    return this.http.get('/app/services/workHistory/mocks/workHistory.data.json').pipe(
+    return this.http.get('https://tmburnell.github.io/personal/app/services/workHistory/mocks/workHistory.data.json').pipe(
       map((res: any) => res.workHistory as Experiences)
     );
   }

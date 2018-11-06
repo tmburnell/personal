@@ -17,7 +17,7 @@ export class UserService {
   }
 
   getMockUser(): Observable<User> {
-    return this.http.get('/app/services/user/mocks/user.data.json').pipe(
+    return this.http.get('https://tmburnell.github.io/personal/app/services/user/mocks/user.data.json').pipe(
       map((res: any) => res.user as User));
   }
 }
