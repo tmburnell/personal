@@ -1,7 +1,7 @@
 import {Component, Output, EventEmitter, Input, ViewChild, DoCheck, KeyValueDiffers} from '@angular/core';
 import {MatTabNav} from '@angular/material';
 
-import {TabConfig} from 'app/_models';
+import {TabConfig} from 'app/models';
 
 @Component({
     selector: 'app-nav',
@@ -9,25 +9,13 @@ import {TabConfig} from 'app/_models';
     styleUrls: ['app-nav.component.scss']
 })
 export class AppNavComponent implements DoCheck {
-    /**
-     * config for the Nav.
-     *
-     * @type {EventEmitter<string>}
-     * @memberOf GitLabListComponent
-     */
     @Input() navConfig: TabConfig;
 
-    /**
-     * Event indicating Navigation needs to change.
-     *
-     * @type {EventEmitter<string>}
-     * @memberOf GitLabListComponent
-     */
     @Output() navChange: EventEmitter<any> = new EventEmitter();
 
     @ViewChild(MatTabNav)
     public nav: MatTabNav;
-    public hideInkBar: boolean = false;
+    public hideInkBar = false;
     public differ: any;
 
     constructor(public differs: KeyValueDiffers) {

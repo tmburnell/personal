@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, ResolveStart} from '@angular/router';
-import 'rxjs/add/operator/pairwise';
 
-import {TabConfig} from 'app/_models';
+
+import {TabConfig} from 'app/models';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       {name: 'R & D', route: '/r-and-d'}
     ]
   } as TabConfig;
-  public showHeader: boolean = false;
+  public showHeader = false;
 
   constructor(private router: Router) {
   }

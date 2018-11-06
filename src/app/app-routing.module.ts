@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {ResumePageComponent} from 'app/resume-page';
-import {UnderConstructionPageComponent} from 'app/under-construction-page';
+import {ResumePageComponent} from 'app/screens/resume-page';
+import {UnderConstructionPageComponent} from 'app/screens/under-construction-page';
 
 const appRoutes: Routes = [
     {path: 'resume', component: ResumePageComponent},

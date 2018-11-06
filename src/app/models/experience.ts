@@ -6,3 +6,5 @@ export class Experience {
   description?: string;
   bullets?: Array<string>;
 }
+
+export type Experiences = Array<Experience>;

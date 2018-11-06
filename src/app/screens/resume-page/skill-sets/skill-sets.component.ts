@@ -8,11 +8,11 @@ import {Component, Input} from '@angular/core';
 export class SkillSetsComponent {
   @Input() data: any;
 
-  getSkillLevel(n:number): Array<any> {
+  getSkillLevel(n: number): Array<any> {
     return this.getArray(Math.floor(n / 10));
   }
 
-  getArray(i:number): Array<any> {
+  getArray(i: number): Array<any> {
     return new Array(i);
   }
 }

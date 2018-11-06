@@ -1,4 +1,4 @@
-class rangedNumber {
+class RangedNumber {
   private value: number;
 
   constructor(private minVal = 1, private maxVal = 100) {
@@ -10,9 +10,8 @@ class rangedNumber {
   public setValue(value: number) {
     if (this.isValid(value)) {
       this.value = value;
-    }
-    else {
-      throw new RangeError(`${value} does not fall between ${this.minVal} and ${this.maxVal}`)
+    } else {
+      throw new RangeError(`${value} does not fall between ${this.minVal} and ${this.maxVal}`);
     }
   }
 
@@ -27,7 +26,7 @@ class rangedNumber {
 
 export class Skill {
   name: string;
-  level: rangedNumber;
+  level: RangedNumber;
   description?: string;
 }
 
@@ -40,3 +39,5 @@ export class SkillSet {
   title: string;        // Skills will be grouped by title
   skills: Array<Skill>;
 }
+
+export type SkillSets = Array<SkillSet>;

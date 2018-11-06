@@ -1,8 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material'
+import {MatTabsModule} from '@angular/material';
 
-import  {TabConfig} from '../.';
+import {TabConfig} from 'app/models';
 
 import {AppNavComponent} from './app-nav.component';
 

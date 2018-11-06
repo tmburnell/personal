@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Experience} from "app/_models";
+import {Experiences} from 'app/models/index';
 
 @Component({
   selector: 'app-history-details',
@@ -7,7 +7,7 @@ import {Experience} from "app/_models";
   styleUrls: ['./history-details.component.scss']
 })
 export class HistoryDetailsComponent {
-  @Input() data: Array<Experience>;
+  @Input() data: Experiences;
   @Input() icon: string;
   @Input() title: string;
   @Input() nullEndDateText: string;

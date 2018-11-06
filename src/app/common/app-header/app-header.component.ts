@@ -1,6 +1,6 @@
 import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
-import {TabConfig, User} from 'app/_models';
-import {UserService} from 'app/_services';
+import {TabConfig, User} from 'app/models';
+import {UserService} from 'app/services';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +17,8 @@ export class AppHeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUser().subscribe((user)=>{
-      this.user=user;
+    this.userService.getUser().subscribe((user) => {
+      this.user = user;
     }, err => {
       this.userService.getMockUser().subscribe((user) => {
         this.user = user;

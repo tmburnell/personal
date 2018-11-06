@@ -1,48 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
-import {FormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {QRCodeModule} from 'angularx-qrcode';
-
-import {MatTabsModule, MatSliderModule, MatButtonModule, MatMenuModule, MatTooltipModule} from "@angular/material";
-const MaterialModules = [
-    MatTabsModule,
-    MatSliderModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatTooltipModule
-];
-
-import {Angular2FontawesomeModule} from 'angular2-fontawesome/angular2-fontawesome'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
-import {UnderConstructionPageComponent} from './under-construction-page'
 
-import {ResumePageComponent, SkillSetsComponent, HistoryDetailsComponent} from './resume-page';
-const ResumePage = [
-  ResumePageComponent,
-  SkillSetsComponent,
-  HistoryDetailsComponent
-];
-
-import {EducationService, SkillsService, UserService, WorkHistoryService} from 'app/_services';
-const Services = [
-    EducationService,
-    SkillsService,
-    UserService,
-    WorkHistoryService
-];
-
-import {AppRoutingModule} from "./app-routing.module";
-import {AppHeaderComponent, AppNavComponent, KeysPipe, CapitalizePipe} from 'app/common';
-const CommonComponents = [
-    AppHeaderComponent,
-    AppNavComponent,
-    KeysPipe,
-    CapitalizePipe
-];
+import {AppRoutingModule} from './app-routing.module';
+import {CommonComponents} from 'app/common';
+import {Screens} from './screens';
+import {ThirdPartyModules} from './thirdPartyModules';
 
 
 @NgModule({
@@ -50,9 +17,7 @@ const CommonComponents = [
         AppComponent,
         CommonComponents,
 
-        ResumePage,
-        UnderConstructionPageComponent,
-        HistoryDetailsComponent
+        Screens
     ],
     imports: [
         BrowserModule,
@@ -61,15 +26,7 @@ const CommonComponents = [
         HttpClientModule,
         AppRoutingModule,
 
-        FlexLayoutModule,
-        Angular2FontawesomeModule,
-        QRCodeModule,
-
-        // Material
-        MaterialModules
-    ],
-    providers: [
-        Services
+        ThirdPartyModules,
     ],
     bootstrap: [AppComponent]
 })
