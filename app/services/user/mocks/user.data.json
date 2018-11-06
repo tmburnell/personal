@@ -1,0 +1,25 @@
+{
+  "user": {
+    "name": "Tim Burnell",
+    "title": "Lead Software Engineer",
+    "avatar": "./assets/avatar.jpg",
+    "address": "",
+    "phone": "",
+    "links": {
+      "email": {
+        "url": "tmburnell@gmail.com",
+        "prefix": "mailto:"
+      },
+      "website": null,
+      "linkedIn": {
+        "url": "https://www.linkedin.com/in/tim-burnell-2086ba126"
+      },
+      "twitter": null,
+      "github": {
+        "url": "https://github.com/tmburnell"
+      }
+    },
+    "blurb": "A lead full stack developer that is verse in all levels of enterprise grade applications (mainframe to java, database to client-side, support to development).  Passionate for developing client-facing application that are visually pleasing, while at the same time making sure it is as secure as possible."
+  }
+}
+
