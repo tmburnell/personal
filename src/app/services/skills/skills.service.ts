@@ -17,7 +17,7 @@ export class SkillsService {
   }
 
   getMockSkills(): Observable<SkillSets> {
-    return this.http.get('https://cdn.rawgit.com/tmburnell/personal/gh-pages/app/services/skills/mocks/skills.data.json').pipe(
+    return this.http.get('/app/services/skills/mocks/skills.data.json').pipe(
       map((res: any) => res.skills as SkillSets));
   }
 }

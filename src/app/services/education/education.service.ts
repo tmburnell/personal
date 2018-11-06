@@ -17,7 +17,7 @@ export class EducationService {
   }
 
   getMockEducation(): Observable<Experiences> {
-    return this.http.get('https://cdn.rawgit.com/tmburnell/personal/gh-pages/app/services/education/mocks/education.data.json').pipe(
+    return this.http.get('/app/services/education/mocks/education.data.json').pipe(
       map((res: any) => res.education as Experiences));
   }
 }
