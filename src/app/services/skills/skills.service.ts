@@ -13,9 +13,7 @@ export class SkillsService {
   }
 
   getSkills(): Observable<SkillSets> {
-    return this.http.get('/api/v1/skills').pipe(
-      map((res: SkillSets) => res as SkillSets);
-    );
+    return this.http.get('/api/v1/skills').pipe(map((res: SkillSets) => res as SkillSets));
   }
 
   getMockSkills(): Observable<SkillSets> {
